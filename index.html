@@ -37,25 +37,33 @@
 
       <div class="col s12 m6">
         <div class="card hoverable">
-          <div class="card-image">
-            <img src="/AdrienVannson/xaviergury.png">
-            <span class="card-title black-text">Xavier Gury</span>
+          <div class="slider">
+            <ul class="slides">
+              <li><img src="images/xaviergury01.png"></li>
+              <li><img src="images/xaviergury02.png"></li>
+              <li><img src="images/xaviergury03.png"></li>
+              <li><img src="images/xaviergury04.png"></li>
+            </ul>
           </div>
-          <div class="card-content">
-            <p>Site créé pour mon professeur d'Arts Plastiques au collège, afin qu'il puisse partager ses productions.</p>
-          </div>
-          <div class="card-action">
-            <a href="https://www.xaviergury.fr" target="_blank" rel="noopener noreferrer">Xavier Gury</a>
-            <a href="https://www.github.com/AdrienVannson/XavierGury" target="_blank" rel="noopener noreferrer">Source</a>
-          </div>
+          <!--<div class="card-image">
+          <img src="/AdrienVannson/xaviergury.png">
+          <span class="card-title black-text">Xavier Gury</span>
+        </div>-->
+        <div class="card-content">
+          <p>Site web créé pour mon professeur d'Arts Plastiques au collège, afin qu'il puisse partager ses productions.</p>
+        </div>
+        <div class="card-action">
+          <a href="https://www.xaviergury.fr" target="_blank" rel="noopener noreferrer">Xavier Gury</a>
+          <a href="https://www.github.com/AdrienVannson/XavierGury" target="_blank" rel="noopener noreferrer">Source</a>
         </div>
       </div>
+    </div>
 
-      <div class="col s12 m6">
-        <div class="card blue hoverable">
-          <div class="card-content white-text">
-            <span class="card-title">CG Ranking</span>
-            <p>Outil en ligne permettant d'afficher l'évolution du classement des participants aux concours organisés par Codingame.<br/>
+    <div class="col s12 m6">
+      <div class="card blue hoverable">
+        <div class="card-content white-text">
+          <span class="card-title">CG Ranking</span>
+          <p>Outil en ligne permettant d'afficher l'évolution du classement des participants aux concours organisés par Codingame.<br/>
             Les classements sont relevés régulièrement et enregistrés dans une base de données.</p>
           </div>
           <div class="card-action">
@@ -70,39 +78,44 @@
           <div class="card-content white-text">
             <span class="card-title">Algo-lib</span>
             <p>Implémentations en C++ des algorithmes les plus couramment utilisés, pour éviter de les recoder complètement lors de compétitions.
-          </div>
-          <div class="card-action">
-            <a href="https://github.com/AdrienVannson/algo-lib" target="_blank" rel="noopener noreferrer">Source</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col s12 m6">
-        <div class="card blue hoverable">
-          <div class="card-content white-text">
-            <span class="card-title">3D-Renderer</span>
-            <p>Moteur de rendu écrit en C++ utilisant le <em>ray-tracing</em>.</p>
-          </div>
-          <div class="card-action">
-            <a href="https://github.com/AdrienVannson/3D-Renderer" target="_blank" rel="noopener noreferrer">Source</a>
+            </div>
+            <div class="card-action">
+              <a href="https://github.com/AdrienVannson/algo-lib" target="_blank" rel="noopener noreferrer">Source</a>
+            </div>
           </div>
         </div>
+
+        <div class="col s12 m6">
+          <div class="card blue hoverable">
+            <div class="card-content white-text">
+              <span class="card-title">3D-Renderer</span>
+              <p>Moteur de rendu écrit en C++ utilisant le <em>ray-tracing</em>.</p>
+            </div>
+            <div class="card-action">
+              <a href="https://github.com/AdrienVannson/3D-Renderer" target="_blank" rel="noopener noreferrer">Source</a>
+            </div>
+          </div>
+        </div>
+
       </div>
+    </main>
 
-    </div>
-  </main>
-
-  <footer class="page-footer blue">
-    <div class="container">
-      <p>Adrien VANNSON</p>
-    </div>
-    <div class="footer-copyright">
+    <footer class="page-footer blue">
       <div class="container">
-        © Adrien VANNSON
+        <p>Adrien VANNSON</p>
       </div>
-    </div>
-  </footer>
+      <div class="footer-copyright">
+        <div class="container">
+          © Adrien VANNSON
+        </div>
+      </div>
+    </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</body>
-</html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      M.Slider.init(document.querySelectorAll('.slider'), {'height':560});
+    });
+    </script>
+  </body>
+  </html>
