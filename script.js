@@ -11,4 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }).mount();
   }
 
+  // Tabs
+  var tabs = document.getElementsByClassName('tabs');
+  for (var i=0; i<tabs.length; i++) {
+    M.Tabs.init(tabs[i], {});
+  }
+
 });
