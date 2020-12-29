@@ -8,6 +8,10 @@ main {
   flex: 1 0 auto;
 }
 
+.brand-logo {
+  width: 100%;
+}
+
 p {
   text-align: justify;
 }
