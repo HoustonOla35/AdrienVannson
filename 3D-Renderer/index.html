@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+  <title>Moteur de rendu 3D - Adrien Vannson</title>
+
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="stylesheet" href="/AdrienVannson/styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="grey lighten-4">
+
+  <header class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper blue">
+        <a href="#" class="brand-logo center">Adrien Vannson</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Moteur de rendu 3D</h1>
+
+    <h2>Exemples de scènes</h2>
+
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">Propagation d'ondes</span>
+        <p>L'objectif est de simuler la propagation d'ondes à la surface d'un liquide. Pour cela, on note \(h(x,y)\) la hauteur de liquide au point de coordonnées \((x,y)\), et on admet que la propagation des ondes vérifie l'équation de d'Alembert :
+        \[\frac{1}{c^2} \frac{\partial^2 h}{\partial t^2} = \Delta h\]
+        Ici, \(\Delta\) désigne l'opérateur laplacien définit par \(\Delta = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}\), et \(c\) la vitesse de propagation des ondes dans le milieu considéré. À partir de cette équation, de conditions initiales et de conditions de bord, il est possible de simuler numériquement la propagation des ondes.
+        Pour effectuer la simulation, on utilise la méthode d'Euler explicite. Tout d'abord, la surface sur laquelle la simulation sera effectuée est discrétisée en petits rectangles de taille \(\delta x \times \delta y\) et de coordonnées \((i,j) \in [\![0,n-1]\!] \times [\![0,m-1]\!] \). On note \(h_{i,j}\) la hauteur de liquide sur chaque carré, et \(\delta t\) le pas de temps utilisé.<br/>
+        Pour chaque position qui n'est pas située au bord du maillage, les valeurs de \(h_{i,j}\) et de \(\frac{\partial h_{i,j}}{\partial t}\) sont mises à jour via les approximations suivantes :
+        \[
+          \left\{
+            \begin{array}{l}
+              h_{i,j}(t + \delta t) \approx h_{i,j}(t) + \delta t \frac{\partial h_{i,j}}{\partial t}(t) \\
+              \frac{\partial h_{i,j}}{\partial t}(t + \delta t) \approx \frac{\partial h_{i,j}}{\partial t}(t) + \delta t . c^2 . \Delta_{discret} h_{i,j} (t)
+            \end{array}
+          \right.
+        \]
+        Où \(\Delta_{discret} h_{i,j}(t) \triangleq \frac{h_{i+1,j}(t) + h_{i-1,j}(t) - 2h_{i,j}(t)}{\delta x^2} + \frac{h_{i,j+1}(t) + h_{i,j-1}(t) - 2h_{i,j}(t)}{\delta y^2}\).
+
+        Pour parcourir une distance \(l\), les ondes ont besoin d'un temps \(t = \frac{l}{c}\). Ainsi, pour que la simulation s'effectue correctement, il est nécessaire de choisir \(\delta t \ll \frac{\delta x}{c}\) et \(\delta t \ll \frac{\delta y}{c}\).
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer blue">
+    <div class="container"></div>
+    <div class="footer-copyright">
+      <div class="container"></div>
+    </div>
+  </footer>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  <script src="/AdrienVannson/script.js"></script>
+</body>
+</html>
