@@ -185,14 +185,31 @@
 
         <div class="card blue hoverable">
           <div class="card-content white-text">
-            <span class="card-title">Fractal explorer</span>
+            <span class="card-title">Explorateur de fractales</span>
             <p>
               Permet de visualiser l'ensemble de Mandelbrot et des ensembles de Julia.
             </p>
           </div>
+
           <div class="card-action">
+            <a href="#modal-fractals" class="modal-trigger" onclick="window.dispatchEvent(new Event('resize'));">Aperçu</a>
             <a href="/fractals/" target="_blank" rel="noopener noreferrer">Site web</a>
             <a href="https://www.github.com/AdrienVannson/Fractal-explorer" target="_blank" rel="noopener noreferrer">Github</a>
+          </div>
+
+          <div id="modal-fractals" class="modal">
+            <div class="modal-content">
+              <div class="splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide"><img src="/AdrienVannson/resources/fractal-explorer-01.png"/></li>
+                    <li class="splide__slide"><img src="/AdrienVannson/resources/fractal-explorer-02.png"/></li>
+                    <li class="splide__slide"><img src="/AdrienVannson/resources/fractal-explorer-03.png"/></li>
+                    <li class="splide__slide"><img src="/AdrienVannson/resources/fractal-explorer-04.png"/></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -205,11 +222,11 @@
           </div>
 
           <div class="card-action">
-            <a href="#photos-consommation" class="modal-trigger">Aperçu</a>
+            <a href="#modal-consommation" class="modal-trigger">Aperçu</a>
             <a href="https://www.github.com/AdrienVannson/Consommation" target="_blank" rel="noopener noreferrer">Github</a>
           </div>
 
-          <div id="photos-consommation" class="modal">
+          <div id="modal-consommation" class="modal">
             <div class="modal-content">
               <img src="/AdrienVannson/resources/consommation.png" class="responsive-img"/>
             </div>
