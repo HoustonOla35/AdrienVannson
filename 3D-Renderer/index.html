@@ -31,9 +31,9 @@
         <span class="card-title">Propagation d'ondes</span>
         <p>L'objectif est de simuler la propagation d'ondes à la surface d'un liquide. Pour cela, on note \(h(x,y)\) la hauteur de liquide au point de coordonnées \((x,y)\), et on admet que la propagation des ondes vérifie l'équation de d'Alembert :
         \[\frac{1}{c^2} \frac{\partial^2 h}{\partial t^2} = \Delta h\]
-        Ici, \(\Delta\) désigne l'opérateur laplacien définit par \(\Delta = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}\), et \(c\) la vitesse de propagation des ondes dans le milieu considéré. À partir de cette équation, de conditions initiales et de conditions de bord, il est possible de simuler numériquement la propagation des ondes.
-        Pour effectuer la simulation, on utilise la méthode d'Euler explicite. Tout d'abord, la surface sur laquelle la simulation sera effectuée est discrétisée en petits rectangles de taille \(\delta x \times \delta y\) et de coordonnées \((i,j) \in [\![0,n-1]\!] \times [\![0,m-1]\!] \). On note \(h_{i,j}\) la hauteur de liquide sur chaque carré, et \(\delta t\) le pas de temps utilisé.<br/>
-        Pour chaque position qui n'est pas située au bord du maillage, les valeurs de \(h_{i,j}\) et de \(\frac{\partial h_{i,j}}{\partial t}\) sont mises à jour via les approximations suivantes :
+        Ici, \(\Delta\) désigne l'opérateur laplacien définit par \(\Delta = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}\), et \(c\) la vitesse de propagation des ondes. À partir de cette équation, de conditions initiales et de conditions de bord, il est possible de simuler numériquement la propagation des ondes.
+        Pour effectuer la simulation, on utilise la méthode d'Euler explicite. Tout d'abord, la surface de simulation est discrétisée en petits rectangles de taille \(\delta x \times \delta y\) et de coordonnées \((i,j) \in [\![0,n-1]\!] \times [\![0,m-1]\!] \). On note \(h_{i,j}\) la hauteur de liquide sur chaque carré, et \(\delta t\) le pas de temps utilisé.<br/>
+        Pour chaque position qui n'est pas située au bord du maillage, les valeurs de \(h_{i,j}\) et de \(\frac{\partial h_{i,j}}{\partial t}\) à la date \(t + \delta t\) sont calculées à partir de celles à la date \(t\) via les approximations suivantes :
         \[
           \left\{
             \begin{array}{l}
@@ -44,7 +44,7 @@
         \]
         Où \(\Delta_{discret} h_{i,j}(t) \triangleq \frac{h_{i+1,j}(t) + h_{i-1,j}(t) - 2h_{i,j}(t)}{\delta x^2} + \frac{h_{i,j+1}(t) + h_{i,j-1}(t) - 2h_{i,j}(t)}{\delta y^2}\).
 
-        Pour parcourir une distance \(l\), les ondes ont besoin d'un temps \(t = \frac{l}{c}\). Ainsi, pour que la simulation s'effectue correctement, il est nécessaire de choisir \(\delta t \ll \frac{\delta x}{c}\) et \(\delta t \ll \frac{\delta y}{c}\).
+        Pour parcourir une distance \(l\), les ondes ont besoin d'un temps \(t = \frac{l}{c}\), il est donc nécessaire de choisir \(\delta t \ll \frac{\delta x}{c}\) et \(\delta t \ll \frac{\delta y}{c}\).
         </p>
       </div>
     </div>
