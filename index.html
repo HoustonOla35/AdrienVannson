@@ -5,7 +5,6 @@
 
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Étudiant en CPGE MP* au lycée Henri Poincaré"/>
 
   <link rel="stylesheet" href="styles.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
@@ -51,18 +50,25 @@
       <!-- Partie gauche -->
       <div class="col s12 m6">
 
-        <div class="card blue hoverable">
-          <div class="card-content white-text">
-            <span class="card-title">Reconstruction d'image sur GPU en temps réel</span>
-            <p>Stage de Master de trois mois réalisé à Karlsruhe Institute of Technology (KIT) avec l'encadrement de Johannes Hanika.</p>
-            <p>L'algorithme de <em>path-tracing</em>, lorsqu'il est utilisé en temps réel, peut ne pas avoir le temps de converger complètement. L'image produite est alors très bruitée. Il existe des méthodes permettant de reconstruire l'image cible à partir de l'image bruitée en utilisant du <em>machine learning</em>, mais elles peuvent prendre trop de temps à s'exécuter. Dans ce stage, j'ai généré des images à l'aide de l'algorithme de path-tracing, utilisé ces données pour entrainer un CNN à reconstruire des images de bonne qualité à partir des images bruitées, et travaillé sur une méthode de bas niveau permettant d'évaluer rapidement ce réseau sur carte graphique.</p>
-            <a class="waves-effect waves-light btn orange accent-3 right" href="resources/GPU-denoising.pdf" target="_blank">
-              <i class="material-icons left">download</i>
-              Rapport de stage
-            </a>
+        <div class="card hoverable">
+          <div class="card-image">
+            <img src="resources/GPU-denoising/evaluation.png">
+          </div>
+          <div class="card-content">
+            <span class="card-title">Real time image denoising on GPU</span>
+              <p>During a three-month research internship at Karlsruhe Institute of Technology (KIT), I worked on a method to reconstruct images rendered with the path-tracing algorithm on a GPU. I was under the supervision of <a href="https://jo.dreggn.org/home/">Johannes Hanika</a>.</p>
+
+              <p>The path-tracing algorithm is a Monte Carlo algorithm that can generate images of 3D scenes. In real-time conditions, it is usually not possible to perform enough iterations for the algorithm to converge: the output image is very noisy. It is possible to apply machine learning techniques to reconstruct an estimation of the original image from the noisy image, but these machine learning methods are computationally expensive: it is not yet possible to use them at real-time rates.<p>
+                
+              <p>During my internship, I first generated several images of 3D scenes using a path-tracer that I created. Two versions of each image are generated: a noisy image with a low number of samples per pixel that could have been obtained at real-time rates, and the final image that is obtained after the convergence of the algorithm. I trained a convolutional neural network with the U-Net architecture to denoise noisy images, and worked on a low-level method to infer the prediction of the network as fast as possible on a Nvidia GPU using its tensor cores efficiently.</p>
           </div>
           <div class="card-action">
-            <a href="resources/GPU-denoising-slides.pdf" target="_blank" rel="noopener noreferrer">Slides</a>
+            <a href="resources/GPU-denoising/report.pdf" target="_blank" rel="noopener noreferrer" class="blue-text">Report</a>
+            <a href="resources/GPU-denoising/slides.pdf" target="_blank" rel="noopener noreferrer" class="blue-text">Slides</a>
+
+            <a href="https://www.kit.edu/" title="KIT" target="_blank" rel="noopener noreferrer">
+              <img src="resources/GPU-denoising/kit.png" alt="KIT logo" style="height:2em; display:block; float: right;"/>
+            </a>
           </div>
         </div>
 
