@@ -19,3 +19,20 @@ p {
 .splide__slide img {
   width: 100%;
 }
+
+/* Change the color of sliders */
+input[type=range]::-webkit-slider-thumb {
+  background-color: #2196f3 !important;
+}
+
+input[type=range]::-moz-range-thumb {
+  background-color: #2196f3 !important;
+}
+
+input[type=range]::-ms-thumb {
+  background-color: #2196f3 !important;
+}
+
+input[type=range] + .thumb {
+  background-color: #2196f3 !important;
+}

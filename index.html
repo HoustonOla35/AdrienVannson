@@ -233,6 +233,28 @@
           </div>
         </div>
 
+        <div class="card hoverable">
+          <div class="card-content">
+            <span class="card-title">Fake hands generation</span>
+
+            <img id="hands-img" src="resources/fake-hands-generator/00439.png" alt="AI generated hands" style="width: 100%"/>
+
+            <form action="#">
+              <p class="range-field">
+                <input type="range" id="hands-selection" min="1" max="50" value="44" oninput="updateHandsImg()"/>
+              </p>
+            </form>
+
+            <p>Using a diffusion algorithm, this program generates images of hands. This AI model is a convolutional neural network (CNN) with the U-Net architecture. It is trained on 11K Hands, a dataset of images of hands [1].</p>
+
+            <p>The slider above can be used to show images generated during the training of the network. The network is trained during 500 epochs, and six new images are generated every ten epochs. We can see that as the training progresses, the images are increasingly realistic, even if the number and the position of the fingers may be wrong. </p>
+
+            <p>Since the network is fully convolutional, it has only access to local information when it generates the image. This can explain why it struggles to build more realistic images.</p>
+
+            <p>[1] Mahmoud Afifi, "11K Hands: Gender recognition and biometric identification using a large dataset of hand images." Multimedia Tools and Applications, 2019.</p>
+          </div>
+        </div>
+
         <div class="card blue hoverable">
           <div class="card-content white-text">
             <span class="card-title">Transfert de session TLS</span>
