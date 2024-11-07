@@ -81,8 +81,12 @@
 
         <div class="card blue hoverable">
           <div class="card-content white-text">
-            <span class="card-title">3D-Renderer</span>
-            <p>Moteur de rendu 3D écrit en C++ utilisant le <em>ray-tracing</em>.</p>
+            <span class="card-title">Rendering</span>
+            <p>I have been working on several 3D renderers over the years. I first starting with a very simple one written in C++ as a side project when I was in high school. A few years later, I rewrote it in Rust, while adding new functionnalities. Later, I developped yet another renderer for a university project.</p>
+
+            <p>The first scene presented bellow was rendered using the latter. It is a simulation of a Michelson interferometer, a famous and useful physical instrument. It is composed of a light source, a beam splitter, two mirrors and a screen. The two mirrors are placed such that the distance traveled by the light when going though one mirror is slightly different from the distance when going though the other one. This produces the interference pattern.</p>
+
+            <p>To obtain this image, I implemented spectral renderering and interference rendering, as well as other more common features. The image was part of the runner-ups of a rendering competition!</p>
           </div>
 
           <div class="card-tabs">
@@ -95,21 +99,12 @@
 
           <div class="card-content blue lighten-4">
             <div id="tab-objects">
-              <div class="splide">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <img src="resources/3D-Renderer-teapot.png"/>
-                    </li>
-                    <li class="splide__slide">
-                      <img src="resources/3D-Renderer-torus-knot.png"/>
-                    </li>
-                    <li class="splide__slide">
-                      <img src="resources/3D-Renderer-monkeys.png"/>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <img src="resources/michelson-interferometer.png" class="responsive-img"/>
+
+              <a class="waves-effect waves-light btn orange accent-3 right" href="https://rgl.epfl.ch/pages/courses/cs440/sp24/competition2024" target="_blank">
+                Competition results
+              </a>
+              <br/><br/>
             </div>
             <div id="tab-animation">
               <video class="responsive-video" controls>
@@ -125,10 +120,6 @@
                 <source src="resources/3D-Renderer-waves-diffraction.mp4" type="video/mp4"/>
               </video>
             </div>
-          </div>
-
-          <div class="card-action">
-            <a href="https://github.com3D-Renderer" target="_blank" rel="noopener noreferrer">Github</a>
           </div>
         </div>
 
