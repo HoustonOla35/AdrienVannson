@@ -122,91 +122,6 @@
             </div>
           </div>
         </div>
-
-        <div class="card blue hoverable">
-          <div class="card-content white-text">
-            <span class="card-title">CG Ranking</span>
-            <p>
-              Outil en ligne permettant d'afficher l'évolution du score des participants aux concours organisés par Codingame.<br/>
-              Les classements sont relevés régulièrement et enregistrés dans une base de données.
-            </p>
-          </div>
-          <div class="card-action">
-            <a href="#modal-cg-ranking" class="modal-trigger">Aperçu</a>
-            <a href="/cg-ranking/" target="_blank" rel="noopener noreferrer">Site web</a>
-            <a href="https://www.github.comCG-Ranking" target="_blank" rel="noopener noreferrer">Github</a>
-          </div>
-
-          <div id="modal-cg-ranking" class="modal">
-            <div class="modal-content">
-              <img src="resources/cg-ranking.png" class="responsive-img"/>
-            </div>
-          </div>
-        </div>
-
-        <div class="card blue hoverable">
-          <div class="card-content white-text">
-            <span class="card-title">Reconnaissance de balles</span>
-            <p>
-              Programme réalisé dans le cadre de mon projet de Sciences de l'Ingénieur en Terminale : il permet de détecter la position de balles de tennis sur une image. La qualité des résultats obtenus est assez dépendante de la luminosité du terrain, mais elle est généralement très bonne.
-            </p>
-            <div class="splide">
-              <div class="splide__track">
-                <ul class="splide__list">
-                  <li class="splide__slide">
-                    <img src="resources/reconnaissance-balles-1.jpg"/>
-                  </li>
-                  <li class="splide__slide">
-                    <img src="resources/reconnaissance-balles-2.jpg"/>
-                  </li>
-                  <li class="splide__slide">
-                    <img src="resources/reconnaissance-balles-3.jpg"/>
-                  </li>
-                  <li class="splide__slide">
-                    <img src="resources/reconnaissance-balles-4.jpg"/>
-                  </li>
-                  <li class="splide__slide">
-                    <img src="resources/reconnaissance-balles-5.jpg"/>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="card-action">
-            <a href="https://github.comReconnaissance-balles" target="_blank" rel="noopener noreferrer">Github</a>
-          </div>
-        </div>
-
-        <div class="card blue hoverable">
-          <div class="card-content white-text">
-            <span class="card-title">Explorateur de fractales</span>
-            <p>
-              Permet de visualiser l'ensemble de Mandelbrot et des ensembles de Julia.
-            </p>
-          </div>
-
-          <div class="card-action">
-            <a href="#modal-fractals" class="modal-trigger" onclick="window.dispatchEvent(new Event('resize'));">Aperçu</a>
-            <a href="/fractals/" target="_blank" rel="noopener noreferrer">Site web</a>
-            <a href="https://www.github.comFractal-explorer" target="_blank" rel="noopener noreferrer">Github</a>
-          </div>
-
-          <div id="modal-fractals" class="modal">
-            <div class="modal-content">
-              <div class="splide">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide"><img src="resources/fractal-explorer-01.png"/></li>
-                    <li class="splide__slide"><img src="resources/fractal-explorer-02.png"/></li>
-                    <li class="splide__slide"><img src="resources/fractal-explorer-03.png"/></li>
-                    <li class="splide__slide"><img src="resources/fractal-explorer-04.png"/></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
 
       <!-- Partie droite -->
@@ -281,7 +196,13 @@
             <a href="https://www.github.comXavierGury" target="_blank" rel="noopener noreferrer">Github</a>
           </div>
         </div>
+      </div>
+    </div>
 
+    <h2>A few smaller projects</h2>
+
+    <div class="row">
+      <div class="col s12 m6"> <!-- left column -->
         <div class="card blue hoverable">
           <div class="card-content white-text">
             <span class="card-title">Suivi de consommation électrique</span>
@@ -305,6 +226,41 @@
 
         <div class="card blue hoverable">
           <div class="card-content white-text">
+            <span class="card-title">Reconnaissance de balles</span>
+            <p>
+              Programme réalisé dans le cadre de mon projet de Sciences de l'Ingénieur en Terminale : il permet de détecter la position de balles de tennis sur une image. La qualité des résultats obtenus est assez dépendante de la luminosité du terrain, mais elle est généralement très bonne.
+            </p>
+            <div class="splide">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <img src="resources/reconnaissance-balles-1.jpg"/>
+                  </li>
+                  <li class="splide__slide">
+                    <img src="resources/reconnaissance-balles-2.jpg"/>
+                  </li>
+                  <li class="splide__slide">
+                    <img src="resources/reconnaissance-balles-3.jpg"/>
+                  </li>
+                  <li class="splide__slide">
+                    <img src="resources/reconnaissance-balles-4.jpg"/>
+                  </li>
+                  <li class="splide__slide">
+                    <img src="resources/reconnaissance-balles-5.jpg"/>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-action">
+            <a href="https://github.comReconnaissance-balles" target="_blank" rel="noopener noreferrer">Github</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m6"> <!-- right column -->
+        <div class="card blue hoverable">
+          <div class="card-content white-text">
             <span class="card-title">Décorrecteur orthographique</span>
             <p>
               Outil permettant d'ajouter de nombreuses fautes d'orthographe à un texte initialement correct.
@@ -314,6 +270,57 @@
           <div class="card-action">
             <a href="/decorrecteur/" target="_blank" rel="noopener noreferrer">Site web</a>
             <a href="https://www.github.comDecorrecteur" target="_blank" rel="noopener noreferrer">Github</a>
+          </div>
+        </div>
+
+        <div class="card blue hoverable">
+          <div class="card-content white-text">
+            <span class="card-title">Explorateur de fractales</span>
+            <p>
+              Permet de visualiser l'ensemble de Mandelbrot et des ensembles de Julia.
+            </p>
+          </div>
+
+          <div class="card-action">
+            <a href="#modal-fractals" class="modal-trigger" onclick="window.dispatchEvent(new Event('resize'));">Aperçu</a>
+            <a href="/fractals/" target="_blank" rel="noopener noreferrer">Site web</a>
+            <a href="https://www.github.comFractal-explorer" target="_blank" rel="noopener noreferrer">Github</a>
+          </div>
+
+          <div id="modal-fractals" class="modal">
+            <div class="modal-content">
+              <div class="splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide"><img src="resources/fractal-explorer-01.png"/></li>
+                    <li class="splide__slide"><img src="resources/fractal-explorer-02.png"/></li>
+                    <li class="splide__slide"><img src="resources/fractal-explorer-03.png"/></li>
+                    <li class="splide__slide"><img src="resources/fractal-explorer-04.png"/></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card blue hoverable">
+          <div class="card-content white-text">
+            <span class="card-title">CG Ranking</span>
+            <p>
+              Outil en ligne permettant d'afficher l'évolution du score des participants aux concours organisés par Codingame.<br/>
+              Les classements sont relevés régulièrement et enregistrés dans une base de données.
+            </p>
+          </div>
+          <div class="card-action">
+            <a href="#modal-cg-ranking" class="modal-trigger">Aperçu</a>
+            <a href="/cg-ranking/" target="_blank" rel="noopener noreferrer">Site web</a>
+            <a href="https://www.github.comCG-Ranking" target="_blank" rel="noopener noreferrer">Github</a>
+          </div>
+
+          <div id="modal-cg-ranking" class="modal">
+            <div class="modal-content">
+              <img src="resources/cg-ranking.png" class="responsive-img"/>
+            </div>
           </div>
         </div>
 
